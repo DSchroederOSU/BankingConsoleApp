@@ -8,10 +8,13 @@ git clone https://github.com/DSchroederOSU/BankingConsoleApp.git .
 then run:
 
 ```
-dotnet run
+npm install
+npm run build
+npm run start
 ```
+This will install "dotnet-2.0.0" and "dotnet-sdk-2.0.0" and allow the user to build and run the c# project.
 
-This will bring up the main application window that looks like:
+After running "npm run start" the program will bring up the main application window that looks like:
 
 ![alt text](https://github.com/DSchroederOSU/BankingConsoleApp/blob/master/assets/menu.png)
 
