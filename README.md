@@ -12,4 +12,4 @@ dotnet run
 ```
 
 This will bring up the main application window that looks like:
-![alt text][https://github.com/DSchroederOSU/BankingConsoleApp/tree/master/assets/mainmenu.png]
+![alt text](https://github.com/DSchroederOSU/BankingConsoleApp/blob/master/assets/mainmenu.png)
