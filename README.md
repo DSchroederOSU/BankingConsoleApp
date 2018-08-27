@@ -27,6 +27,6 @@ When logged in, the user is prompted with a new menu:
 Now the user may make changes to his/her account by selecting menu items by typing the corresponding number and hitting enter. 
 
 ## Notes
-Multiple Users may register and use the app at once. The app keeps track of the current "logged in" user while maintaining data of all users in a List<User> called RegisteredUsers.
+Multiple Users may register and use the app at once. The app keeps track of the current "logged in" user while maintaining data of all users in a List\<User\> called RegisteredUsers.
 
 There is minimal input validation set up for username and password requirements. This may be implemented later if needed. The application does validate that the user is registering with a unique username.
