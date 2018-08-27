@@ -10,7 +10,7 @@ namespace ConsoleApp
         public DateTime timestamp { get; set; }
 
         // method to make a withdraw transaction
-        // Update User object, subtract amount from AcountTotal, add transaction to list
+        // Update User object, subtract amount from AccountTotal, add transaction to list
         public static void MakeWithdraw()
         {
             Console.WriteLine("Enter Amount to Withdraw:");
@@ -18,11 +18,20 @@ namespace ConsoleApp
 
             if (!double.IsNaN(WithdrawAmount))
             {
-                int index = Globals.RegisteredUsers.FindIndex((User obj) => obj.Username == Globals.CurrentUser.Username);
-                Globals.RegisteredUsers[index].AccountTotal -= WithdrawAmount;
-                Globals.RegisteredUsers[index].Transactions.Add(new Transaction { Amount = WithdrawAmount, Type = "Withdraw", timestamp = DateTime.Now });
-                Globals.CurrentUser = Globals.RegisteredUsers[index];
-                Console.Clear();
+                if(validateFunds(WithdrawAmount)){
+                    int index = Globals.RegisteredUsers.FindIndex((User obj) => obj.Username == Globals.CurrentUser.Username);
+                    Globals.RegisteredUsers[index].AccountTotal -= WithdrawAmount;
+                    Globals.RegisteredUsers[index].Transactions.Add(new Transaction { Amount = WithdrawAmount, Type = "Withdraw", timestamp = DateTime.Now });
+                    Globals.CurrentUser = Globals.RegisteredUsers[index];
+                    Console.Clear();
+                }
+                else {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Insufficient funds required for this transaction.");
+                    Console.ResetColor();
+                }
+                
             }
             else
             {
@@ -35,7 +44,7 @@ namespace ConsoleApp
         }
 
         // method to make a deposit transaction
-        // Update User object, add amount from AcountTotal, add transaction to list
+        // Update User object, add amount from AccountTotal, add transaction to list
         public static void MakeDeposit()
         { 
             Console.WriteLine("Enter Amount to Deposit:");
@@ -89,6 +98,10 @@ namespace ConsoleApp
             Console.WriteLine("Hit Enter to Return");
             Console.ReadLine();
 
+        }
+
+        private static bool validateFunds(double amount){
+            return (Globals.CurrentUser.AccountTotal - amount < 0) ? false : true;
         }
     }
 
