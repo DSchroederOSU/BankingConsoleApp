@@ -10,3 +10,6 @@ then run:
 ```
 dotnet run
 ```
+
+This will bring up the main application window that looks like:
+![alt text][./assets/mainmenu.png]
