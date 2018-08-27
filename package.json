@@ -1,0 +1,14 @@
+{
+  "name": "BankingApp",
+  "version": "1.33.7",
+  "description": "BankingApp C# app",
+  "scripts": {
+    "build": "dotnet build ./ConsoleApp.csproj",
+    "start": "dotnet bin/Debug/netcoreapp2.0/ConsoleApp.dll"
+  },
+  "devDependencies": {},
+  "dependencies": { 
+    "dotnet-2.0.0": "^1.4.4",
+    "dotnet-sdk-2.0.0": "^1.4.4"
+  }
+}

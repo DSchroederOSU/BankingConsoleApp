@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/DanielSchroederMac/.dotnet/store/|arch|/|tfm|",
+      "/Users/DanielSchroederMac/.nuget/packages",
+      "/Users/DanielSchroederMac/.net/2.0.0/node_modules/dotnet-sdk-2.0.0-osx/sdk/NuGetFallbackFolder"
+    ]
+  }
+}

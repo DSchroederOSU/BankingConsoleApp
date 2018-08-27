@@ -1,0 +1,10 @@
+/Users/DanielSchroederMac/Development/ConsoleApp/bin/Debug/netcoreapp2.0/ConsoleApp.deps.json
+/Users/DanielSchroederMac/Development/ConsoleApp/bin/Debug/netcoreapp2.0/ConsoleApp.runtimeconfig.json
+/Users/DanielSchroederMac/Development/ConsoleApp/bin/Debug/netcoreapp2.0/ConsoleApp.runtimeconfig.dev.json
+/Users/DanielSchroederMac/Development/ConsoleApp/bin/Debug/netcoreapp2.0/ConsoleApp.dll
+/Users/DanielSchroederMac/Development/ConsoleApp/bin/Debug/netcoreapp2.0/ConsoleApp.pdb
+/Users/DanielSchroederMac/Development/ConsoleApp/obj/Debug/netcoreapp2.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/DanielSchroederMac/Development/ConsoleApp/obj/Debug/netcoreapp2.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/DanielSchroederMac/Development/ConsoleApp/obj/Debug/netcoreapp2.0/ConsoleApp.AssemblyInfo.cs
+/Users/DanielSchroederMac/Development/ConsoleApp/obj/Debug/netcoreapp2.0/ConsoleApp.dll
+/Users/DanielSchroederMac/Development/ConsoleApp/obj/Debug/netcoreapp2.0/ConsoleApp.pdb
