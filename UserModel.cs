@@ -15,14 +15,24 @@ namespace ConsoleApp
         // get user account information and create a new registered user
         public static void RegisterNewUser()
         {
-            Console.Clear();
             Console.WriteLine("Register New User Account:");
             Console.WriteLine("Please enter a username:");
             string username = Console.ReadLine();
-            Console.WriteLine("Please enter a password:");
-            string pass = InputValidation.getPassword();
-            createNewUser(username, pass);
-            Console.WriteLine("Registration Successful");
+            if(validateUsername(username)){
+                Console.WriteLine("Please enter a password:");
+                string pass = InputValidation.getPassword();
+                createNewUser(username, pass);
+                Console.WriteLine("Registration Successful");   
+            }
+            else
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Username already exists:");
+                Console.ResetColor();
+                RegisterNewUser();
+            }
+            
         }
 
         // create a new user object and add it to the list of registered users
@@ -44,7 +54,6 @@ namespace ConsoleApp
         {
             if (Globals.RegisteredUsers.Count > 0)
             { 
-
                 int index = Globals.RegisteredUsers.FindIndex((User obj) => obj.Username == username && obj.Password == password);
                 if (index != -1)
                 {
@@ -53,6 +62,16 @@ namespace ConsoleApp
                 }
             }
             return false;
+        }
+
+        private static bool validateUsername(string username){
+            if (Globals.RegisteredUsers.Count > 0)
+            { 
+                int index = Globals.RegisteredUsers.FindIndex((User obj) => obj.Username == username);
+                // if user was found return false 
+                return (index == -1) ? true : false;
+            }
+            return true;
         }
     }
 }

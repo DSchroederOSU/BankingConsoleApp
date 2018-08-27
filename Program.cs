@@ -21,6 +21,7 @@ namespace ConsoleApp
                 switch (value)
                 {
                     case 1:
+                        Console.Clear();
                         User.RegisterNewUser();
                         MenuHelper.PrintMainMenu();
                         GetMenuCommand();
